@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     private Camera _fpsCamera;
     private CharacterController _controller;
     public FpsUI _ui;
+    public Transform _holster;
 
     //Player stats
     public int _hp;
@@ -153,39 +154,116 @@ public class Player : MonoBehaviour
 
         if (_hp <= 0)
         {
-            //end game
+            Application.Quit();
         }
     }
 
 
     private void OnTriggerEnter(Collider collision)
     {
-    //    if (collision.tag == "Card")
-    //    {
-    //        if (collision.GetComponent<Card>()._doorNumber == 1)
-    //        {
-    //            _hasRedKey = true;
-    //            _ui._redKey.enabled = true;
-    //        }
-    //        else if (collision.GetComponent<Card>()._doorNumber == 2)
-    //        {
-    //            _hasGreenKey = true;
-    //            _ui._greenKey.enabled = true;
-    //        }
-    //        else if (collision.GetComponent<Card>()._doorNumber == 3)
-    //        {
-    //            _hasBlueKey = true;
-    //            _ui._blueKey.enabled = true;
-    //        }
-    //    }
-    //    else if (collision.tag == "Enemy")
-    //    {
-    //        _hp -= collision.GetComponent<EnemyController>().damage;
-    //    }
+        if(collision.tag == "Health")
+        {
+            AddHealth(collision.gameObject.GetComponent<Health>().amount);
+        }
+        else if(collision.tag == "GunPickup")
+        {
+            int gunType = collision.gameObject.GetComponent<GunPickup>().type;
 
-    //    if (_hp <= 0)
-    //    {
-    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    //    }
+            switch(gunType)
+            {
+                case 1:
+                    if(!_holster.GetChild(0).GetComponent<Gun>().isPickedUp)
+                    {
+                        _holster.GetChild(0).GetComponent<Gun>().isPickedUp = true;
+                    }
+                    _holster.GetChild(0).GetComponent<Gun>().ammo += collision.gameObject.GetComponent<GunPickup>().amount;
+                    break;
+                case 2:
+                    if (!_holster.GetChild(1).GetComponent<Gun>().isPickedUp)
+                    {
+                        _holster.GetChild(1).GetComponent<Gun>().isPickedUp = true;
+                    }
+                    _holster.GetChild(1).GetComponent<Gun>().ammo += collision.gameObject.GetComponent<GunPickup>().amount;
+                    break;
+                case 3:
+                    if (!_holster.GetChild(2).GetComponent<Gun>().isPickedUp)
+                    {
+                        _holster.GetChild(2).GetComponent<Gun>().isPickedUp = true;
+                    }
+                    _holster.GetChild(2).GetComponent<Gun>().ammo += collision.gameObject.GetComponent<GunPickup>().amount;
+                    break;
+                case 4:
+                    if (!_holster.GetChild(3).GetComponent<Gun>().isPickedUp)
+                    {
+                        _holster.GetChild(3).GetComponent<Gun>().isPickedUp = true;
+                    }
+                    _holster.GetChild(3).GetComponent<Gun>().ammo += collision.gameObject.GetComponent<GunPickup>().amount;
+                    break;
+            };
+
+            Destroy(collision.gameObject);
+            //if(collision.gameObject.GetComponent<GunPickup>().type == "Pistol")
+            //{
+            //    foreach(Transform weapon in transform.GetChild(1).GetChild(0))
+            //    {
+            //        if(weapon.name == "Pistol")
+            //        {
+            //            weapon.GetComponent<Gun>().ammo = collision.gameObject.GetComponent<GunPickup>().amount;
+            //        }
+
+            //        Destroy(collision.gameObject);
+            //    }
+            //}
+            //else if (collision.gameObject.GetComponent<GunPickup>().type == "Shotgun")
+            //{
+            //        foreach (Transform weapon in transform.GetChild(1).GetChild(1))
+            //        {
+            //            if (weapon.name == "Shotgun")
+            //            {
+            //                weapon.GetComponent<Gun>().ammo = collision.gameObject.GetComponent<GunPickup>().amount;
+            //            }
+            //        }
+
+            //        Destroy(collision.gameObject);
+            //}
+            //else if (collision.gameObject.GetComponent<GunPickup>().type == "SMG")
+            //{
+            //    foreach (Transform weapon in transform.GetChild(1).GetChild(2))
+            //    {
+            //        if (weapon.name == "SMG")
+            //        {
+            //            weapon.GetComponent<Gun>().ammo = collision.gameObject.GetComponent<GunPickup>().amount;
+            //        }
+
+            //        Destroy(collision.gameObject);
+            //    }
+            //}
+            //else if (collision.gameObject.GetComponent<GunPickup>().type == "Sniper")
+            //{
+            //    foreach (Transform weapon in transform.GetChild(1).GetChild(3))
+            //    {
+            //        if (weapon.name == "Sniper")
+            //        {
+            //            weapon.GetComponent<Gun>().ammo = collision.gameObject.GetComponent<GunPickup>().amount;
+            //        }
+            //    }
+
+            //    Destroy(collision.gameObject);
+            //}
+        }
+        else if(collision.tag == "Ammo")
+        {
+            _activeGun.ammo += collision.gameObject.GetComponent<Ammo>().amount;
+            if(_activeGun.ammo > 99)
+            {
+                _activeGun.ammo = 99;
+            }
+        }
+        else if(collision.tag == "Projectile")
+        {
+
+        }
+
+        Destroy(collision.gameObject);
     }
 }

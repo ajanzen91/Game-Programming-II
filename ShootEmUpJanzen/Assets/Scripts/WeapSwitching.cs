@@ -54,12 +54,9 @@ public class WeapSwitching : MonoBehaviour
         {
             if (i == selectedWeapon)
             {
-                if (weapon.GetComponent<Gun>().isPickedUp)
-                {
-                    weapon.gameObject.SetActive(true);
-                    _player._activeGun = weapon.GetComponent<Gun>();
-                }
-                
+                weapon.gameObject.SetActive(true);
+                _player._activeGun = weapon.GetComponent<Gun>();
+                //fix for when descending to
             }
             else
             {

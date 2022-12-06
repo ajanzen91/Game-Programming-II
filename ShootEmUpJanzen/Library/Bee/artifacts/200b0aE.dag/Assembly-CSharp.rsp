@@ -356,12 +356,15 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Low Poly Guns/Scripts/GunsMenu.cs"
 "Assets/Low Poly Guns/Scripts/GunView.cs"
+"Assets/Scripts/Ammo.cs"
 "Assets/Scripts/EnemyController.cs"
 "Assets/Scripts/FpsUI.cs"
 "Assets/Scripts/Gun.cs"
-"Assets/Scripts/Pickup.cs"
+"Assets/Scripts/GunPickup.cs"
+"Assets/Scripts/Health.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/PlayerManager.cs"
+"Assets/Scripts/Projectile.cs"
 "Assets/Scripts/WeapSwitching.cs"
 -langversion:9.0
 

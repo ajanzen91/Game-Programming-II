@@ -22,7 +22,7 @@ AssetImportWorker17
 -logFile
 Logs/AssetImportWorker17.log
 -srvPort
-63000
+63905
 Successfully changed project path to: /Users/austinjanzen/Documents/School/Game-Programming-II/ShootEmUpJanzen
 /Users/austinjanzen/Documents/School/Game-Programming-II/ShootEmUpJanzen
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,7 +54,7 @@ Successfully changed project path to: /Users/austinjanzen/Documents/School/Game-
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 869.22 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 888.65 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.1.0f1 (369b620af41c)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.1.0f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -69,46 +69,51 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2022.1.0f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2022.1.0f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2022.1.0f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56994
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56880
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2022.1.0f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.022442 seconds.
+Registered in 0.010304 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1157.92 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 822.50 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  9.284 seconds
+- Completed reload, in  7.994 seconds
 Domain Reload Profiling:
-	ReloadAssembly (9287ms)
-		BeginReloadAssembly (1007ms)
+	ReloadAssembly (7997ms)
+		BeginReloadAssembly (762ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (4ms)
-		EndReloadAssembly (6722ms)
-			LoadAssemblies (1006ms)
+			CreateAndSetChildDomain (39ms)
+		EndReloadAssembly (5852ms)
+			LoadAssemblies (723ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1627ms)
-				TypeCache.Initialize (1623ms)
-					TypeCache.ScanAssembly (1616ms)
-				ResolveRequiredComponents (4ms)
+			SetupTypeCache (1551ms)
+				TypeCache.Initialize (1548ms)
+					TypeCache.ScanAssembly (1539ms)
+				ResolveRequiredComponents (3ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (419ms)
-			SetupLoadedEditorAssemblies (4064ms)
+			RebuildScriptCaches (603ms)
+			SetupLoadedEditorAssemblies (3011ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (58ms)
-				SetLoadedEditorAssemblies (65ms)
-				RefreshPlugins (1159ms)
-				BeforeProcessingInitializeOnLoad (7ms)
-				ProcessInitializeOnLoadAttributes (2157ms)
-				ProcessInitializeOnLoadMethodAttributes (615ms)
+				InitializePlatformSupportModulesInManaged (89ms)
+				SetLoadedEditorAssemblies (60ms)
+				RefreshPlugins (823ms)
+				BeforeProcessingInitializeOnLoad (6ms)
+				ProcessInitializeOnLoadAttributes (1455ms)
+				ProcessInitializeOnLoadMethodAttributes (577ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (4ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.172505 seconds.
+Registered in 0.019634 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/austinjanzen/Documents/School/Game-Programming-II/ShootEmUpJanzen/Library/PackageCache/com.unity.visualscripting@1.7.5/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/austinjanzen/Documents/School/Game-Programming-II/ShootEmUpJanzen/Library/PackageCache/com.unity.visualscripting@1.7.5/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 11.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.

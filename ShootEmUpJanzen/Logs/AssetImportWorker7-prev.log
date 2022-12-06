@@ -22,7 +22,7 @@ AssetImportWorker7
 -logFile
 Logs/AssetImportWorker7.log
 -srvPort
-63000
+63905
 Successfully changed project path to: /Users/austinjanzen/Documents/School/Game-Programming-II/ShootEmUpJanzen
 /Users/austinjanzen/Documents/School/Game-Programming-II/ShootEmUpJanzen
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,7 +54,7 @@ Successfully changed project path to: /Users/austinjanzen/Documents/School/Game-
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 1895.40 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1371.89 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.1.0f1 (369b620af41c)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.1.0f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -69,45 +69,45 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2022.1.0f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2022.1.0f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2022.1.0f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56757
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56627
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2022.1.0f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.006635 seconds.
+Registered in 0.010624 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 975.95 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 633.91 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in 14.585 seconds
+- Completed reload, in 17.403 seconds
 Domain Reload Profiling:
-	ReloadAssembly (14598ms)
-		BeginReloadAssembly (722ms)
+	ReloadAssembly (17415ms)
+		BeginReloadAssembly (1406ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (38ms)
-		EndReloadAssembly (11448ms)
-			LoadAssemblies (665ms)
+			CreateAndSetChildDomain (3ms)
+		EndReloadAssembly (10583ms)
+			LoadAssemblies (1405ms)
 			RebuildTransferFunctionScriptingTraits (1ms)
-			SetupTypeCache (3986ms)
-				TypeCache.Initialize (3982ms)
-					TypeCache.ScanAssembly (3976ms)
-				ResolveRequiredComponents (4ms)
+			SetupTypeCache (4059ms)
+				TypeCache.Initialize (4057ms)
+					TypeCache.ScanAssembly (4052ms)
+				ResolveRequiredComponents (2ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (560ms)
-			SetupLoadedEditorAssemblies (6089ms)
+			RebuildScriptCaches (671ms)
+			SetupLoadedEditorAssemblies (4938ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (120ms)
-				SetLoadedEditorAssemblies (106ms)
-				RefreshPlugins (977ms)
-				BeforeProcessingInitializeOnLoad (8ms)
-				ProcessInitializeOnLoadAttributes (3217ms)
-				ProcessInitializeOnLoadMethodAttributes (1660ms)
+				InitializePlatformSupportModulesInManaged (57ms)
+				SetLoadedEditorAssemblies (196ms)
+				RefreshPlugins (651ms)
+				BeforeProcessingInitializeOnLoad (18ms)
+				ProcessInitializeOnLoadAttributes (2164ms)
+				ProcessInitializeOnLoadMethodAttributes (1851ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (1ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.038964 seconds.
+Registered in 0.399724 seconds.

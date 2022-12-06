@@ -7,6 +7,7 @@ public class Gun : MonoBehaviour
 
     public int damage;
     public int range;
+    public int ammo;
     public bool isPickedUp;
     //public int _maxAmmo;
     //public int _currAmmo;
@@ -22,6 +23,10 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
+        if(ammo > 99)
+        {
+            ammo = 99;
+        }    
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
@@ -30,23 +35,25 @@ public class Gun : MonoBehaviour
 
     void Shoot()
     {
-        //if (_currAmmo > 0)
-        //{
-        //    --_currAmmo;
-        //}
-        //_muzzleFlash.SetActive(true);
 
-        //StartCoroutine(MuzzleFlash());
-        RaycastHit hit;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+        if (ammo > 0)
         {
-            Debug.Log(hit.transform.name);
+            --ammo;
 
-            //EnemyController target = hit.transform.GetComponent<EnemyController>();
-            //if (target != null)
-            //{
-            //    hit.transform.GetComponent<EnemyController>().TakeDamage(damage);
-            //}
+            //_muzzleFlash.SetActive(true);
+
+            //StartCoroutine(MuzzleFlash());
+            RaycastHit hit;
+            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+            {
+                Debug.Log(hit.transform.name);
+
+                //EnemyController target = hit.transform.GetComponent<EnemyController>();
+                //if (target != null)
+                //{
+                //    hit.transform.GetComponent<EnemyController>().TakeDamage(damage);
+                //}
+            }
         }
     }
 

@@ -15,7 +15,6 @@ public class FpsUI : MonoBehaviour
     //public TMP_Text _fullAmmo;
     public TMP_Text _remainingAmmo;
     public TMP_Text _killCounter;
-    //private int _fullCount, _remainCount;
     public Image _activeWeapLabel;
     //public Image _storedWeapLabel;
     public Image _ammoType;
@@ -39,7 +38,7 @@ public class FpsUI : MonoBehaviour
     {
         _health = _playerRef._hp;
         _textHealth.text = _health.ToString();
-        _killCounter.text = _playerRef._killCount.ToString();
+     //   _killCounter.text = _playerRef._killCount.ToString();
         //_fullCount = _playerRef._activeGun._maxAmmo;
         //_remainCount = _playerRef._activeGun._currAmmo;
         //_fullAmmo.text = _fullCount.ToString();
@@ -51,21 +50,25 @@ public class FpsUI : MonoBehaviour
         {
             _activeWeapLabel.sprite = _shotgunSprite;
             _ammoType.sprite = _shotgunAmmo;
+            _remainingAmmo.text = _playerRef._activeGun.ammo.ToString();
         }
         else if (_playerRef._activeGun.name == "Pistol")
         {
             _activeWeapLabel.sprite = _pistolSprite;
             _ammoType.sprite = _pistolAmmo;
+            _remainingAmmo.text = _playerRef._activeGun.ammo.ToString();
         }
         else if(_playerRef._activeGun.name == "SMG")
         {
             _activeWeapLabel.sprite = _smgSprite;
             _ammoType.sprite = _smgAmmo;
+            _remainingAmmo.text = _playerRef._activeGun.ammo.ToString();
         }
         else if (_playerRef._activeGun.name == "Sniper")
         {
             _activeWeapLabel.sprite = _snipeSprite;
             _ammoType.sprite = _snipeAmmo;
+            _remainingAmmo.text = _playerRef._activeGun.ammo.ToString();
         }
     }
 
@@ -74,7 +77,7 @@ public class FpsUI : MonoBehaviour
     {
         _health = _playerRef._hp;
         _textHealth.text = _health.ToString();
-        _killCounter.text = _playerRef._killCount.ToString();
+       // _killCounter.text = _playerRef._killCount.ToString();
         //_fullCount = _playerRef._activeGun._maxAmmo;
         //_remainCount = _playerRef._activeGun._currAmmo;
         //_fullAmmo.text = _fullCount.ToString();
@@ -85,21 +88,26 @@ public class FpsUI : MonoBehaviour
         {
             _activeWeapLabel.sprite = _shotgunSprite;
             _ammoType.sprite = _shotgunAmmo;
+            _remainingAmmo.text = _playerRef._activeGun.ammo.ToString();
+
         }
         else if (_playerRef._activeGun.name == "Pistol")
         {
             _activeWeapLabel.sprite = _pistolSprite;
             _ammoType.sprite = _pistolAmmo;
+            _remainingAmmo.text = _playerRef._activeGun.ammo.ToString();
         }
         else if (_playerRef._activeGun.name == "SMG")
         {
             _activeWeapLabel.sprite = _smgSprite;
             _ammoType.sprite = _smgAmmo;
+            _remainingAmmo.text = _playerRef._activeGun.ammo.ToString();
         }
         else if (_playerRef._activeGun.name == "Sniper")
         {
             _activeWeapLabel.sprite = _snipeSprite;
             _ammoType.sprite = _snipeAmmo;
+            _remainingAmmo.text = _playerRef._activeGun.ammo.ToString();
         }
     }
 }
